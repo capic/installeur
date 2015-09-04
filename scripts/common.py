@@ -8,7 +8,8 @@ from lib.menu import menu
 def node_js():
     if utils.which('node') is None:
         print(u'_____ Installation de Nodejs _____')
-        os.system('apt-get install node')
+        os.system('wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash')
+        os.system('nvm install latest')
     else:
         print(u'Nodejs est déjà installé')
 

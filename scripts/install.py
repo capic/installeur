@@ -5,6 +5,7 @@ from lib.menu import menu
 import plow_solution
 import utils
 import os
+import common
 
 
 def chargement_config():
@@ -44,10 +45,10 @@ def chargement_config():
         utils.REST_ADRESSE = config['rest_adresse']
     if 'repertoire_web_log' in config:
         utils.REPERTOIRE_WEB_LOG = config['repertoire_web_log']
-    if 'repertoire_download_destination_temp' in config:
-        utils.REPERTOIRE_DOWNLOAD_DESTINATION_TEMP = config['repertoire_download_destination_temp']
-    if 'repertoire_download_destination' in config:
-        utils.REPERTOIRE_DOWNLOAD_DESTINATION = config['repertoire_download_destination']
+    if 'repertoire_telechargement_temporaire' in config:
+        utils.REPERTOIRE_TELECHARGEMENT_TEMPORAIRE = config['repertoire_telechargement_temporaire']
+    if 'repertoire_telechargement' in config:
+        utils.REPERTOIRE_TELECHARGEMENT = config['repertoire_telechargement']
     if 'log_output' in config:
         utils.LOG_OUTPUT = config['log_output']
     if 'console_output' in config:
@@ -69,13 +70,24 @@ def main():
     general_menu_selection = general_menu.show(
         {
             utils.INSTALLATION_TYPE_AUTOMATIQUE: u'Installation totale automatique',
-            utils.INSTALLATION_TYPE_INTERACTIVE: u'Installation totale interactive'
+            utils.INSTALLATION_TYPE_INTERACTIVE: u'Installation totale interactive',
+            utils.INSTALLATION_TYPE_SERVEUR: u'Installation uniquement d''un serveur',
+            utils.INSTALLATION_TYPE_SOLUTION_PLOW: u'Installation de la solution plow',
+            utils.INSTALLATION_TYPE_TOTALE_SANS_SERVEUR: u'Installation totale sans serveur',
         }, u'Menu installation général'
     )
 
     print(u'Séléction => %s' % general_menu_selection)
+    if general_menu_selection == utils.INSTALLATION_TYPE_AUTOMATIQUE:
+        exit()
     if general_menu_selection == utils.INSTALLATION_TYPE_INTERACTIVE:
+        exit()
+    if general_menu_selection == utils.INSTALLATION_TYPE_SERVEUR:
+        common.serveur()
+    if general_menu_selection == utils.INSTALLATION_TYPE_SOLUTION_PLOW:
         plow_solution.main()
+    if general_menu_selection == utils.INSTALLATION_TYPE_TOTALE_SANS_SERVEUR:
+        exit()
 
 if __name__ == '__main__':
     main()
