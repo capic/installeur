@@ -16,14 +16,20 @@ def chargement_config():
         utils.GIT_PLOW_BACK_REST = config['git_plow_back_rest']
     if 'git_plow_python' in config:
         utils.GIT_PLOW_PYTHON = config['git_plow_python']
+    if 'git_plow_front' in config:
+        utils.GIT_PLOW_FRONT = config['git_plow_front']
     if 'repertoire_git_plow_back_rest' in config:
         utils.REPERTOIRE_GIT_PLOW_BACK_REST = config['repertoire_git_plow_back_rest']
     if 'repertoire_git_plow_python' in config:
         utils.REPERTOIRE_GIT_PLOW_PYTHON = config['repertoire_git_plow_python']
+    if 'repertoire_git_plow_front' in config:
+        utils.REPERTOIRE_GIT_PLOW_FRONT = config['repertoire_git_plow_front']
     if 'repertoire_installation_plow_back_rest' in config:
         utils.REPERTOIRE_INSTALLATION_PLOW_BACK_REST = config['repertoire_installation_plow_back_rest']
     if 'repertoire_installation_plow_python' in config:
         utils.REPERTOIRE_INSTALLATION_PLOW_PYTHON = config['repertoire_installation_plow_python']
+    if 'repertoire_installation_plow_front' in config:
+        utils.REPERTOIRE_INSTALLATION_PLOW_FRONT = config['repertoire_installation_plow_front']
     if 'mysql_login' in config:
         utils.MYSQL_LOGIN = config['mysql_login']
     if 'mysql_pass' in config:
@@ -48,19 +54,27 @@ def chargement_config():
         utils.CONSOLE_OUTPUT = config['console_output']
 
 
+def menu_installation():
+    installation_menu = menu.Menu()
+    installation_menu_selection = installation_menu.show(
+        {
+
+        }
+    )
+
 def main():
     chargement_config()
 
     general_menu = menu.Menu()
     general_menu_selection = general_menu.show(
         {
-            '1': u'Installation totale automatique',
-            '2': u'Installation totale interactive'
+            utils.INSTALLATION_TYPE_AUTOMATIQUE: u'Installation totale automatique',
+            utils.INSTALLATION_TYPE_INTERACTIVE: u'Installation totale interactive'
         }, u'Menu installation général'
     )
 
     print(u'Séléction => %s' % general_menu_selection)
-    if general_menu_selection == '2':
+    if general_menu_selection == utils.INSTALLATION_TYPE_INTERACTIVE:
         plow_solution.main()
 
 if __name__ == '__main__':

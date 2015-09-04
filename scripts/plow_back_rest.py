@@ -12,18 +12,18 @@ def creer_fichier_config():
     chemin_fichier_config = '%sconfig/default.json' % utils.REPERTOIRE_GIT_PLOW_BACK_REST
 
     contenu_fichier_config = \
-        '{\r\n\
-            "db": {\r\n\
-                "host": "%s",\r\n\
-                "database": "%s",\r\n\
-                "user": "%s",\r\n\
-                "password": "%s"\r\n\
-                },\r\n\
-                "notification": {\r\n\
-                    "address": "%s}"\r\n\
-                }\r\n\
-              }' % (
-            utils.MYSQL_HOST, utils.MYSQL_DATABASE, utils.MYSQL_LOGIN, utils.MYSQL_PASS, utils.NOTIFICATION_ADRESSE)
+        '{\r\n' \
+        '   "db": {\r\n' \
+        '       "host": "%s",\r\n' \
+        '       "database": "%s",\r\n' \
+        '       "user": "%s",\r\n' \
+        '       "password": "%s"\r\n' \
+        '   },\r\n' \
+        '   "notification": {\r\n' \
+        '       "address": "%s' \
+        '   }"\r\n' \
+        '}' \
+        % (utils.MYSQL_HOST, utils.MYSQL_DATABASE, utils.MYSQL_LOGIN, utils.MYSQL_PASS, utils.NOTIFICATION_ADRESSE)
 
     fichier_config = open(chemin_fichier_config, 'wb')
     fichier_config.write(contenu_fichier_config)
