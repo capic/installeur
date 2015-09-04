@@ -8,6 +8,7 @@ import os
 
 
 def chargement_config():
+    print("_____ Chargement de la config _____")
     config = {}
     execfile(os.path.dirname(os.path.abspath(__file__)) + "/../config.cfg", config)
 
@@ -37,10 +38,11 @@ def main():
         {
             '1': u'Installation totale automatique',
             '2': u'Installation totale interactive'
-        }, u'Menu installation solution plow pas à pas'
+        }, u'Menu installation général'
     )
 
-    if general_menu_selection == 2:
+    print(u'Séléction => %s' % general_menu_selection)
+    if general_menu_selection == '2':
         plow_solution.main()
 
 if __name__ == '__main__':

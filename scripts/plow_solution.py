@@ -13,7 +13,7 @@ def menu_pas_a_pas():
         }, u'Menu installation solution plow pas à pas'
     )
 
-    if plow_menu_selection == 1:
+    if plow_menu_selection == '1':
         plow_back_rest.main()
 
 
@@ -25,7 +25,7 @@ def menu_principal():
             '2': u'Installation pas à pas'
         }, u'Menu installation solution plow')
 
-    if plow_menu_selection == 2:
+    if plow_menu_selection == '2':
         menu_pas_a_pas()
 
 
