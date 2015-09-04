@@ -2,6 +2,7 @@
 __author__ = 'Vincent'
 
 import utils
+import os
 
 def node_js():
     if utils.which('node') is None:
