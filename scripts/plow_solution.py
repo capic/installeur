@@ -1,6 +1,6 @@
 __author__ = 'Vincent'
 
-from lib.menu import menu
+from scripts.lib.menu import menu
 
 
 def main():
