@@ -11,12 +11,7 @@ def creer_fichier_config():
     chemin_fichier_config = '%sconfig.cfg' % utils.REPERTOIRE_INSTALLATION_PLOW_PYTHON
 
     contenu_fichier_config = \
-        'rest_adresse=%s\r\n\
-        repertoire_web_log=%s\r\n\
-        repertoire_telechargement_temporaire=%s\r\n\
-        repertoire_telechargement=%s\r\n\
-        log_output=%s\r\n\
-        console_output=%s\r\n' % (
+        'rest_adresse=%s\r\n\repertoire_web_log=%s\r\n\repertoire_telechargement_temporaire=%s\r\n\repertoire_telechargement=%s\r\n\log_output=%s\r\n\console_output=%s\r\n' % (
             utils.REST_ADRESSE, utils.REPERTOIRE_WEB_LOG, utils.REPERTOIRE_DOWNLOAD_DESTINATION_TEMP,
             utils.REPERTOIRE_DOWNLOAD_DESTINATION, utils.LOG_OUTPUT, utils.CONSOLE_OUTPUT)
 
