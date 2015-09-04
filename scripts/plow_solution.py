@@ -1,20 +1,13 @@
 __author__ = 'Vincent'
 
-from scripts.lib.menu import menu
+from lib.menu import menu
 
 
 def main():
-    test_menu = menu.Menu()
+    plow_menu = menu.Menu()
+    plow_menu_selection = plow_menu.show({'1':'Installation totale', '2':'Installation pas à pas'}, 'Menu installation solution plow')
 
-    user_selection = test_menu.show( {'1':'selezione 1', '2':'selezione 2'}, 'Main menu')
-
-    if user_selection == menu.COMMAND_EXIT:
-        print 'Exit'
-    else:
-        print 'User has select: %s' % user_selection
-
-
-    raw_input('Press any key to close...')
+    print 'Séléction: %s' % plow_menu_selection
 
 
 if __name__ == '__main__':
