@@ -9,7 +9,7 @@ import os
 
 def chargement_config():
     config = {}
-    execfile(os.path.dirname(os.path.abspath(__file__)) + "../config.cfg", config)
+    execfile(os.path.dirname(os.path.abspath(__file__)) + "/../config.cfg", config)
 
     if 'git_plow_back_rest' in config:
         utils.GIT_PLOW_BACK_REST = config['git_plow_back_rest']
