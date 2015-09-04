@@ -14,10 +14,16 @@ def chargement_config():
 
     if 'git_plow_back_rest' in config:
         utils.GIT_PLOW_BACK_REST = config['git_plow_back_rest']
+    if 'git_plow_python' in config:
+        utils.GIT_PLOW_PYTHON = config['git_plow_python']
     if 'repertoire_git_plow_back_rest' in config:
         utils.REPERTOIRE_GIT_PLOW_BACK_REST = config['repertoire_git_plow_back_rest']
+    if 'repertoire_git_plow_python' in config:
+        utils.REPERTOIRE_GIT_PLOW_PYTHON = config['repertoire_git_plow_python']
     if 'repertoire_installation_plow_back_rest' in config:
         utils.REPERTOIRE_INSTALLATION_PLOW_BACK_REST = config['repertoire_installation_plow_back_rest']
+    if 'repertoire_installation_plow_python' in config:
+        utils.REPERTOIRE_INSTALLATION_PLOW_PYTHON = config['repertoire_installation_plow_python']
     if 'mysql_login' in config:
         utils.MYSQL_LOGIN = config['mysql_login']
     if 'mysql_pass' in config:
