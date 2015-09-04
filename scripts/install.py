@@ -34,6 +34,8 @@ def chargement_config():
         utils.MYSQL_DATABASE = config['mysql_database']
     if 'notification_adresse' in config:
         utils.NOTIFICATION_ADRESSE = config['notification_adresse']
+    if 'rest_adresse' in config:
+        utils.REST_ADRESSE = config['rest_adresse']
 
 
 def main():
