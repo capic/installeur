@@ -8,8 +8,7 @@ import shutil
 
 
 def creerFichierConfig():
-    chemin_fichier_config = '%sconfig/default.json'
-    utils.REPERTOIRE_GIT_PLOW_BACK_REST
+    chemin_fichier_config = '%sconfig/default.json' % utils.REPERTOIRE_GIT_PLOW_BACK_REST
 
     contenu_fichier_config = \
         '{\
