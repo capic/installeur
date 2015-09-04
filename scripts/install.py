@@ -36,6 +36,16 @@ def chargement_config():
         utils.NOTIFICATION_ADRESSE = config['notification_adresse']
     if 'rest_adresse' in config:
         utils.REST_ADRESSE = config['rest_adresse']
+    if 'repertoire_web_log' in config:
+        utils.REPERTOIRE_WEB_LOG = config['repertoire_web_log']
+    if 'repertoire_download_destination_temp' in config:
+        utils.REPERTOIRE_DOWNLOAD_DESTINATION_TEMP = config['repertoire_download_destination_temp']
+    if 'repertoire_download_destination' in config:
+        utils.REPERTOIRE_DOWNLOAD_DESTINATION = config['repertoire_download_destination']
+    if 'log_output' in config:
+        utils.LOG_OUTPUT = config['log_output']
+    if 'console_output' in config:
+        utils.CONSOLE_OUTPUT = config['console_output']
 
 
 def main():

@@ -17,8 +17,8 @@ def creer_fichier_config():
         repertoire_telechargement=%s\r\n\
         log_output=%s\r\n\
         console_output=%s\r\n' % (
-            utils.REST_ADRESSE, utils.DIRECTORY_WEB_LOG, utils.DIRECTORY_DOWNLOAD_DESTINATION_TEMP,
-            utils.DIRECTORY_DOWNLOAD_DESTINATION, utils.LOG_OUTPUT, utils.CONSOLE_OUTPUT)
+            utils.REST_ADRESSE, utils.REPERTOIRE_WEB_LOG, utils.REPERTOIRE_DOWNLOAD_DESTINATION_TEMP,
+            utils.REPERTOIRE_DOWNLOAD_DESTINATION, utils.LOG_OUTPUT, utils.CONSOLE_OUTPUT)
 
     fichier_config = open(chemin_fichier_config, 'wb')
     fichier_config.write(chemin_fichier_config)
