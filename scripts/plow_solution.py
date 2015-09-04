@@ -25,6 +25,8 @@ def menu_principal():
             '2': u'Installation pas à pas'
         }, u'Menu installation solution plow')
 
+    if plow_menu_selection == 2:
+        menu_pas_a_pas()
 
 
 def main():
