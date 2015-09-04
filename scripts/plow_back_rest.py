@@ -8,6 +8,7 @@ import shutil
 
 
 def creerFichierConfig():
+    print(u'_____ Création du fichier de config _____')
     chemin_fichier_config = '%sconfig/default.json' % utils.REPERTOIRE_GIT_PLOW_BACK_REST
 
     contenu_fichier_config = \
@@ -35,7 +36,9 @@ def main():
     print(u'_____ Téléchargement de plow back rest _____')
     git_cmd = 'git clone %s %s' % (utils.GIT_PLOW_BACK_REST, utils.REPERTOIRE_GIT_PLOW_BACK_REST)
     os.system(git_cmd)
+    os.system('npm install')
     creerFichierConfig()
+    print(u'_____ Déplacement de plow back rest dans le dossier finale _____')
     shutil.copytree(utils.REPERTOIRE_GIT_PLOW_BACK_REST, utils.REPERTOIRE_INSTALLATION_PLOW_BACK_REST,
                     ignore=shutil.ignore_patterns(*utils.IGNORE_PATTERN))
     shutil.rmtree(utils.REPERTOIRE_GIT_PLOW_BACK_REST)
