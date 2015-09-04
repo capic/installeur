@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'Vincent'
 
 GIT_PLOW_BACK_REST = ''
