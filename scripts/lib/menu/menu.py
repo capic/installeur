@@ -22,7 +22,7 @@ class DuplicateKeyError(MenuError): pass
 def clear_console():
     try:
         # Windows
-        os.system('cls')
+        os.system('clear')
     except:
         try:
         # basch (Linux and Mac)
