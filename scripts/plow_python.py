@@ -21,7 +21,7 @@ def creer_fichier_config():
             utils.REPERTOIRE_DOWNLOAD_DESTINATION, utils.LOG_OUTPUT, utils.CONSOLE_OUTPUT)
 
     fichier_config = open(chemin_fichier_config, 'wb')
-    fichier_config.write(chemin_fichier_config)
+    fichier_config.write(contenu_fichier_config)
 
     fichier_config.close()
 

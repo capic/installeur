@@ -25,7 +25,7 @@ NOTIFICATION_ADRESSE = ''
 LOG_OUTPUT = ''
 CONSOLE_OUTPUT = ''
 
-IGNORE_PATTERN = ('.git', 'tmp', '.svn')
+IGNORE_PATTERN = ('.git', 'tmp', '.svn', '.gitignore')
 
 
 def which(program):
