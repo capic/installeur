@@ -9,7 +9,7 @@ def node_js():
     if utils.which('node') is None:
         print(u'_____ Installation de Nodejs _____')
         os.system('wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash')
-        os.system('source ~/.nvm/nvm.sh')
+        execfile('~/.nvm/nvm.sh')
         os.system('nvm install latest')
     else:
         print(u'Nodejs est déjà installé')
