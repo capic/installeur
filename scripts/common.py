@@ -8,7 +8,10 @@ from lib.menu import menu
 def node_js():
     if utils.which('node') is None:
         print(u'_____ Installation de Nodejs _____')
-        os.system('wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash')
+        cmd = 'git clone https://github.com/creationix/nvm.git /var/www/nvm'
+        os.system(cmd)
+        os.system('cd /var/www/nvm/')
+        os.system('git checkout `git describe --abbrev=0 --tags`')
         execfile('~/.nvm/nvm.sh')
         os.system('nvm install latest')
     else:
