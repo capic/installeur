@@ -12,7 +12,7 @@ def node_js():
         os.system(cmd)
         os.system('cd /var/www/nvm/')
         os.system('git checkout `git describe --abbrev=0 --tags`')
-        execfile('~/.nvm/nvm.sh')
+        execfile('/var/www/nvm/nvm.sh')
         os.system('nvm install latest')
     else:
         print(u'Nodejs est déjà installé')
