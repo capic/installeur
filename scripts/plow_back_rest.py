@@ -9,7 +9,7 @@ import shutil
 
 def creer_fichier_config():
     print(u'_____ Création du fichier de config _____')
-    chemin_fichier_config = '%sconfig/default.json' % utils.REPERTOIRE_GIT_PLOW_BACK_REST
+    chemin_fichier_config = '%sconfig/local.json' % utils.REPERTOIRE_GIT_PLOW_BACK_REST
 
     contenu_fichier_config = \
         '{\r\n' \
@@ -20,10 +20,12 @@ def creer_fichier_config():
         '       "password": "%s"\r\n' \
         '   },\r\n' \
         '   "notification": {\r\n' \
-        '       "address": "%s' \
-        '   }"\r\n' \
+        '      "activate": "%s",\r\n' \
+        '       "address": "%s"' \
+        '   }\r\n' \
         '}' \
-        % (utils.MYSQL_HOST, utils.MYSQL_DATABASE, utils.MYSQL_LOGIN, utils.MYSQL_PASS, utils.NOTIFICATION_ADRESSE)
+        % (utils.MYSQL_HOST, utils.MYSQL_DATABASE, utils.MYSQL_LOGIN, utils.MYSQL_PASS, utils.NOTIFICATION_ACTIVATED,
+           utils.NOTIFICATION_ADRESSE)
 
     fichier_config = open(chemin_fichier_config, 'wb')
     fichier_config.write(contenu_fichier_config)
